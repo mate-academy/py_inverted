@@ -1,0 +1,10 @@
+language: python
+python:
+  - "3.5"
+install:
+  - pip install -r requirements.txt
+script:
+  - pytest
+  - flake8 inverted
+  - pylint inverted
+  - mypy --ignore-missing-imports .
